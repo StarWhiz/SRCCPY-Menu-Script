@@ -19,24 +19,18 @@ ECHO ...............................................
 ECHO PRESS 1, 2 OR 3 to select your task, or 4 to EXIT.
 ECHO ...............................................
 ECHO.
-ECHO 1 - Connect Phone to PC via USB. (USB Debugging enabled). Then select this option.
-ECHO 2 - After option 1 is successful. Disconnect phone. Then choose this option.
-ECHO 3 - After option 2 is successful. Choose this option.
-ECHO 4 - EXIT
+ECHO USB Debugging must be enabled on phone for this to work!!!
 ECHO.
-ECHO ...............................................
-ECHO Quick Reference
-ECHO ...............................................
-ECHO Option 1 Success Msg: restarting in TCP mode port: 5555
-ECHO Option 2 Success Msg: connected to 192.168.X.X:5555
-ECHO Ctrl+G = Original resolution.
-ECHO Ctrl+X = Resize to screen.
-ECHO Ctrl+H = Home
-ECHO Ctrl+B = Back
-ECHO Ctrl+M = Menu
-ECHO Ctrl+F = Fullscreen
-ECHO Ctrl+P = Power
-ECHO Ctrl+O = Turn off phone screen
+ECHO For WiFi connection do options 1. 2. Then 3.
+ECHO.
+ECHO For Direct USB connection skip option 1 and 2...
+ECHO Plug in USB cable and choose option 3.
+ECHO.
+ECHO.
+ECHO 1 - Connect Phone to PC via USB. Then choose this option.
+ECHO 2 - Unplug Phone from PC. Then choose this option.
+ECHO 3 - Start scrcpy.exe
+ECHO 4 - EXIT
 ECHO.
 
 SET /P M=Type 1, 2, 3, or 4 then press ENTER:
@@ -56,6 +50,18 @@ GOTO MENU
 :MENU3
 cd %scrcpy_path%
 scrcpy.exe
+ECHO ...............................................
+ECHO Quick Reference
+ECHO ...............................................
+ECHO Ctrl+G = Original resolution.
+ECHO Ctrl+X = Resize to screen.
+ECHO Ctrl+H = Home
+ECHO Ctrl+B = Back
+ECHO Ctrl+M = Menu
+ECHO Ctrl+F = Fullscreen
+ECHO Ctrl+P = Power
+ECHO Ctrl+O = Turn off phone screen
+ECHO.
 GOTO MENU
 :MENUEXIT
 cd %scrcpy_path%
