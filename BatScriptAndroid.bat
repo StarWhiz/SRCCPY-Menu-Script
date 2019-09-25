@@ -49,7 +49,6 @@ adb.exe connect %ip_address%:5555
 GOTO MENU
 :MENU3
 cd %scrcpy_path%
-scrcpy.exe
 ECHO ...............................................
 ECHO Quick Reference
 ECHO ...............................................
@@ -62,6 +61,7 @@ ECHO Ctrl+F = Fullscreen
 ECHO Ctrl+P = Power
 ECHO Ctrl+O = Turn off phone screen
 ECHO.
+scrcpy.exe
 GOTO MENU
 :MENUEXIT
 cd %scrcpy_path%
